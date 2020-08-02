@@ -1,0 +1,48 @@
+/*Design a HashSet without using any built-in hash table libraries.
+
+To be specific, your design should include these functions:
+
+-add(value): Insert a value into the HashSet. 
+-contains(value) : Return whether the value exists in the HashSet or not.
+-remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.*/
+
+Solution - 
+
+class MyHashSet {
+
+    /** Initialize your data structure here. */
+   ArrayList<Integer> arrli = new ArrayList<Integer>();
+    
+    public void add(Integer key) {
+       if(arrli.contains(key)){
+           
+       }else{
+        arrli.add(key);   
+       }
+        
+    }
+    
+    public void remove(Integer key) {
+        if(arrli.contains(key)){
+            arrli.remove(key);   
+       }
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(Integer key) {
+       if(arrli.contains(key)){
+           return true;
+       }
+        else{
+            return false;
+        }
+    }
+}
+
+/**
+ * Your MyHashSet object will be instantiated and called as such:
+ * MyHashSet obj = new MyHashSet();
+ * obj.add(key);
+ * obj.remove(key);
+ * boolean param_3 = obj.contains(key);
+ */
