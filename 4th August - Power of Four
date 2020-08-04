@@ -1,0 +1,17 @@
+/*Given an integer (signed 32 bits), write a function to check whether it is a power of 4.*/
+
+//Solution - 
+
+class Solution {
+    public boolean isPowerOfFour(int num) {
+      double ans = Math.log(num)/Math.log(4);
+        //if ans's decimal value is 0, it means num is power of 4 so..
+        ans=ans*10;
+        if(ans%10==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
